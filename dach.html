@@ -6,43 +6,6 @@
     <title>Bayram Dökmeci | EMEA Commercial Proxy & B2B Consultant</title>
     <meta name="description" content="Senior B2B Business Development Consultant acting as your boots on the ground in EMEA. Specializing in in-person partner visits, European trade fairs, roadshows, and cross-border negotiations.">
     
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Tailwind CSS (CDN) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        slate: {
-                            50: '#F8FAFC',
-                            900: '#0F172A'
-                        },
-                        emerald: {
-                            500: '#10B981'
-                        },
-                        indigo: {
-                            600: '#2563EB'
-                        },
-                        amber: {
-                            500: '#F59E0B'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
@@ -83,15 +46,323 @@
     }
     </script>
     <style>
-        /* Custom styles for details/summary accordions */
-        details > summary {
-            list-style: none;
+        :root {
+            color-scheme: light;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #0f172a;
+            background: #fff;
+            font-synthesis: none;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            --slate-50: #f8fafc;
+            --slate-900: #0f172a;
+            --indigo-600: #2563eb;
+            --emerald-500: #10b981;
         }
-        details > summary::-webkit-details-marker {
-            display: none;
+        *, *::before, *::after { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { margin: 0; min-width: 320px; }
+        img { display: block; max-width: 100%; }
+        a { color: inherit; text-decoration: none; }
+        button, input, textarea, select { font: inherit; }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        ::selection { color: #fff; background: var(--indigo-600); }
+
+        [class~="antialiased"], [class~="font-sans"] { font-family: Arial, Helvetica, sans-serif; }
+        [class~="slogan-handwritten"] { font-family: "Segoe Print", "Bradley Hand", cursive; }
+        [class~="bg-white"] { background-color: #fff; }
+        [class~="bg-slate-50"] { background-color: var(--slate-50); }
+        [class~="bg-slate-800"] { background-color: #1e293b; }
+        [class~="bg-slate-900"] { background-color: var(--slate-900); }
+        [class~="bg-indigo-50"] { background-color: #eef2ff; }
+        [class~="bg-indigo-600"] { background-color: var(--indigo-600); }
+        [class~="bg-emerald-50"] { background-color: #ecfdf5; }
+        [class~="bg-emerald-100"] { background-color: #d1fae5; }
+        [class~="bg-emerald-500"] { background-color: var(--emerald-500); }
+        [class~="bg-amber-50"] { background-color: #fffbeb; }
+        [class~="bg-blue-50"] { background-color: #eff6ff; }
+        [class~="bg-gray-100"] { background-color: #f3f4f6; }
+        [class~="bg-red-100"] { background-color: #fee2e2; }
+        [class~="text-white"] { color: #fff; }
+        [class~="text-slate-900"] { color: var(--slate-900); }
+        [class~="text-slate-400"] { color: #94a3b8; }
+        [class~="text-slate-300"] { color: #cbd5e1; }
+        [class~="text-indigo-200"] { color: #c7d2fe; }
+        [class~="text-indigo-500"] { color: #6366f1; }
+        [class~="text-indigo-600"] { color: var(--indigo-600); }
+        [class~="text-indigo-700"] { color: #4338ca; }
+        [class~="text-emerald-400"] { color: #34d399; }
+        [class~="text-emerald-500"] { color: var(--emerald-500); }
+        [class~="text-emerald-600"] { color: #059669; }
+        [class~="text-emerald-700"] { color: #047857; }
+        [class~="text-amber-500"] { color: #f59e0b; }
+        [class~="text-amber-600"] { color: #d97706; }
+        [class~="text-blue-500"] { color: #3b82f6; }
+        [class~="text-blue-600"] { color: #2563eb; }
+        [class~="text-red-400"] { color: #f87171; }
+        [class~="text-red-500"] { color: #ef4444; }
+        [class~="text-gray-400"] { color: #9ca3af; }
+        [class~="text-gray-500"] { color: #6b7280; }
+        [class~="text-gray-600"] { color: #4b5563; }
+        [class~="text-center"] { text-align: center; }
+        [class~="font-medium"] { font-weight: 500; }
+        [class~="font-semibold"] { font-weight: 600; }
+        [class~="font-bold"] { font-weight: 700; }
+        [class~="font-extrabold"] { font-weight: 800; }
+        [class~="italic"] { font-style: italic; }
+        [class~="text-xs"] { font-size: .75rem; line-height: 1rem; }
+        [class~="text-sm"] { font-size: .875rem; line-height: 1.25rem; }
+        [class~="text-lg"] { font-size: 1.125rem; line-height: 1.75rem; }
+        [class~="text-xl"] { font-size: 1.25rem; line-height: 1.75rem; }
+        [class~="text-2xl"] { font-size: 1.5rem; line-height: 2rem; }
+        [class~="text-3xl"] { font-size: 1.875rem; line-height: 2.25rem; }
+        [class~="text-4xl"] { font-size: 2.25rem; line-height: 2.5rem; }
+        [class~="text-9xl"] { font-size: 8rem; line-height: 1; }
+        [class~="leading-tight"] { line-height: 1.25; }
+        [class~="leading-relaxed"] { line-height: 1.625; }
+        [class~="leading-[1.1]"] { line-height: 1.1; }
+        [class~="tracking-tight"] { letter-spacing: -.025em; }
+        [class~="tracking-wide"] { letter-spacing: .025em; }
+
+        [class~="block"] { display: block; }
+        [class~="inline-flex"] { display: inline-flex; }
+        [class~="flex"] { display: flex; }
+        [class~="grid"] { display: grid; }
+        [class~="hidden"] { display: none; }
+        [class~="flex-col"] { flex-direction: column; }
+        [class~="flex-row"] { flex-direction: row; }
+        [class~="flex-1"] { flex: 1 1 0%; }
+        [class~="flex-grow"] { flex-grow: 1; }
+        [class~="flex-shrink-0"], [class~="shrink-0"] { flex-shrink: 0; }
+        [class~="items-start"] { align-items: flex-start; }
+        [class~="items-center"] { align-items: center; }
+        [class~="items-stretch"] { align-items: stretch; }
+        [class~="justify-between"] { justify-content: space-between; }
+        [class~="justify-center"] { justify-content: center; }
+        [class~="grid-cols-1"] { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+        [class~="grid-cols-2"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        [class~="gap-2"] { gap: .5rem; }
+        [class~="gap-3"] { gap: .75rem; }
+        [class~="gap-4"] { gap: 1rem; }
+        [class~="gap-6"] { gap: 1.5rem; }
+        [class~="gap-8"] { gap: 2rem; }
+        [class~="gap-12"] { gap: 3rem; }
+        [class~="gap-16"] { gap: 4rem; }
+        [class~="space-x-2"] > :not([hidden]) ~ :not([hidden]) { margin-left: .5rem; }
+        [class~="space-x-3"] > :not([hidden]) ~ :not([hidden]) { margin-left: .75rem; }
+        [class~="space-y-4"] > :not([hidden]) ~ :not([hidden]) { margin-top: 1rem; }
+        [class~="space-y-6"] > :not([hidden]) ~ :not([hidden]) { margin-top: 1.5rem; }
+
+        [class~="relative"] { position: relative; }
+        [class~="absolute"] { position: absolute; }
+        [class~="fixed"] { position: fixed; }
+        [class~="inset-0"] { inset: 0; }
+        [class~="top-0"] { top: 0; }
+        [class~="left-0"] { left: 0; }
+        [class~="right-0"] { right: 0; }
+        [class~="bottom-0"] { bottom: 0; }
+        [class~="left-1/2"] { left: 50%; }
+        [class~="left-4"] { left: 1rem; }
+        [class~="right-4"] { right: 1rem; }
+        [class~="bottom-4"] { bottom: 1rem; }
+        [class~="-bottom-10"] { bottom: -2.5rem; }
+        [class~="-right-10"] { right: -2.5rem; }
+        [class~="z-10"] { z-index: 10; }
+        [class~="z-50"] { z-index: 50; }
+        [class~="h-3"] { height: .75rem; }
+        [class~="h-10"] { height: 2.5rem; }
+        [class~="h-12"] { height: 3rem; }
+        [class~="h-14"] { height: 3.5rem; }
+        [class~="h-20"] { height: 5rem; }
+        [class~="h-1.5"] { height: .375rem; }
+        [class~="h-1/2"] { height: 50%; }
+        [class~="h-full"] { height: 100%; }
+        [class~="h-auto"] { height: auto; }
+        [class~="w-3"] { width: .75rem; }
+        [class~="w-10"] { width: 2.5rem; }
+        [class~="w-12"] { width: 3rem; }
+        [class~="w-14"] { width: 3.5rem; }
+        [class~="w-24"] { width: 6rem; }
+        [class~="w-3/4"] { width: 75%; }
+        [class~="w-full"] { width: 100%; }
+        [class~="max-w-2xl"] { max-width: 42rem; }
+        [class~="max-w-3xl"] { max-width: 48rem; }
+        [class~="max-w-4xl"] { max-width: 56rem; }
+        [class~="max-w-5xl"] { max-width: 64rem; }
+        [class~="max-w-7xl"] { max-width: 80rem; }
+        [class~="mx-auto"] { margin-left: auto; margin-right: auto; }
+        [class~="mt-1"] { margin-top: .25rem; }
+        [class~="mt-4"] { margin-top: 1rem; }
+        [class~="mt-8"] { margin-top: 2rem; }
+        [class~="mt-16"] { margin-top: 4rem; }
+        [class~="mb-2"] { margin-bottom: .5rem; }
+        [class~="mb-3"] { margin-bottom: .75rem; }
+        [class~="mb-4"] { margin-bottom: 1rem; }
+        [class~="mb-6"] { margin-bottom: 1.5rem; }
+        [class~="mb-8"] { margin-bottom: 2rem; }
+        [class~="mb-12"] { margin-bottom: 3rem; }
+        [class~="mb-16"] { margin-bottom: 4rem; }
+        [class~="p-3"] { padding: .75rem; }
+        [class~="p-4"] { padding: 1rem; }
+        [class~="p-6"] { padding: 1.5rem; }
+        [class~="p-8"] { padding: 2rem; }
+        [class~="px-3"] { padding-left: .75rem; padding-right: .75rem; }
+        [class~="px-4"] { padding-left: 1rem; padding-right: 1rem; }
+        [class~="px-5"] { padding-left: 1.25rem; padding-right: 1.25rem; }
+        [class~="px-8"] { padding-left: 2rem; padding-right: 2rem; }
+        [class~="py-1"] { padding-top: .25rem; padding-bottom: .25rem; }
+        [class~="py-2"] { padding-top: .5rem; padding-bottom: .5rem; }
+        [class~="py-2.5"] { padding-top: .625rem; padding-bottom: .625rem; }
+        [class~="py-3"] { padding-top: .75rem; padding-bottom: .75rem; }
+        [class~="py-4"] { padding-top: 1rem; padding-bottom: 1rem; }
+        [class~="py-10"] { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+        [class~="py-20"] { padding-top: 5rem; padding-bottom: 5rem; }
+        [class~="py-24"] { padding-top: 6rem; padding-bottom: 6rem; }
+        [class~="pt-0"] { padding-top: 0; }
+        [class~="pt-32"] { padding-top: 8rem; }
+        [class~="pb-16"] { padding-bottom: 4rem; }
+        [class~="pb-28"] { padding-bottom: 7rem; }
+        [class~="border"] { border: 1px solid #e5e7eb; }
+        [class~="border-2"] { border-width: 2px; }
+        [class~="border-8"] { border-width: 8px; }
+        [class~="border-b"] { border-bottom: 1px solid #e5e7eb; }
+        [class~="border-t"] { border-top: 1px solid #e5e7eb; }
+        [class~="border-y"] { border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb; }
+        [class~="border-gray-100"] { border-color: #f3f4f6; }
+        [class~="border-gray-200"] { border-color: #e5e7eb; }
+        [class~="border-white"] { border-color: #fff; }
+        [class~="border-indigo-100"] { border-color: #e0e7ff; }
+        [class~="border-emerald-100"] { border-color: #d1fae5; }
+        [class~="border-emerald-200"] { border-color: #a7f3d0; }
+        [class~="border-red-100"] { border-color: #fee2e2; }
+        [class~="border-slate-700"] { border-color: #334155; }
+        [class~="rounded-lg"] { border-radius: .5rem; }
+        [class~="rounded-xl"] { border-radius: .75rem; }
+        [class~="rounded-2xl"] { border-radius: 1rem; }
+        [class~="rounded-3xl"] { border-radius: 1.5rem; }
+        [class~="rounded-full"] { border-radius: 9999px; }
+        [class~="rounded-[2rem]"] { border-radius: 2rem; }
+        [class~="overflow-hidden"] { overflow: hidden; }
+        [class~="shadow-sm"] { box-shadow: 0 1px 2px 0 rgb(0 0 0 / .05); }
+        [class~="shadow-md"] { box-shadow: 0 4px 6px -1px rgb(0 0 0 / .1), 0 2px 4px -2px rgb(0 0 0 / .1); }
+        [class~="shadow-lg"] { box-shadow: 0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1); }
+        [class~="shadow-xl"] { box-shadow: 0 20px 25px -5px rgb(0 0 0 / .1), 0 8px 10px -6px rgb(0 0 0 / .1); }
+        [class~="shadow-2xl"] { box-shadow: 0 25px 50px -12px rgb(0 0 0 / .25); }
+        [class~="opacity-20"] { opacity: .2; }
+        [class~="opacity-75"] { opacity: .75; }
+        [class~="opacity-90"] { opacity: .9; }
+        [class~="cursor-pointer"] { cursor: pointer; }
+        [class~="object-cover"] { object-fit: cover; }
+        [class~="object-center"] { object-position: center; }
+        [class~="transform"] { transform: translateZ(0); }
+        [class~="-translate-x-1/2"] { transform: translateX(-50%); }
+        [class~="translate-x-4"] { transform: translateX(1rem); }
+        [class~="translate-y-4"] { transform: translateY(1rem); }
+        [class~="-z-10"] { z-index: -10; }
+        [class~="text-2xl"], [class~="text-xl"], [class~="text-lg"] { line-height: 1.4; }
+
+        [class~="bg-gradient-to-tr"] { background-image: linear-gradient(to top right, #e0e7ff, #ecfdf5); }
+        [class~="bg-gradient-to-b"] { background-image: linear-gradient(to bottom, rgb(224 231 255 / .5), transparent); }
+        [class~="blur-3xl"] { filter: blur(64px); }
+        [class~="backdrop-blur"], [class~="backdrop-blur-md"] { -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
+        [class~="bg-white/90"] { background-color: rgb(255 255 255 / .9); }
+        [class~="bg-white/95"] { background-color: rgb(255 255 255 / .95); }
+        [class~="from-indigo-100/50"] { --gradient-start: rgb(224 231 255 / .5); }
+        [class~="to-transparent"] { --gradient-end: transparent; }
+        [class~="from-indigo-100"] { --gradient-start: #e0e7ff; }
+        [class~="to-emerald-50"] { --gradient-end: #ecfdf5; }
+        [class~="transition"], [class~="transition-all"], [class~="transition-colors"] { transition: all .2s ease; }
+        [class~="duration-300"] { transition-duration: .3s; }
+        [class~="hover:bg-indigo-700"]:hover { background-color: #1d4ed8; }
+        [class~="hover:bg-emerald-600"]:hover { background-color: #059669; }
+        [class~="hover:text-indigo-600"]:hover { color: var(--indigo-600); }
+        [class~="hover:text-emerald-500"]:hover,
+        [class~="hover:text-emerald-600"]:hover { color: #059669; }
+        [class~="hover:border-emerald-500"]:hover { border-color: var(--emerald-500); }
+        [class~="hover:shadow-lg"]:hover { box-shadow: 0 10px 15px -3px rgb(0 0 0 / .1); }
+        [class~="hover:shadow-xl"]:hover { box-shadow: 0 20px 25px -5px rgb(0 0 0 / .1); }
+        [class~="hover:-translate-y-0.5"]:hover { transform: translateY(-2px); }
+        [class~="hover:-translate-y-1"]:hover { transform: translateY(-4px); }
+        [class~="active:bg-emerald-100"]:active { background-color: #d1fae5; }
+        [class~="active:bg-indigo-700"]:active { background-color: #4338ca; }
+        [class~="group"]:hover [class~="group-hover:bg-indigo-600"] { background-color: var(--indigo-600); }
+        [class~="group"]:hover [class~="group-hover:text-white"] { color: #fff; }
+        details[open] [class~="group-open:bg-indigo-50"] { background-color: #eef2ff; }
+        details[open] [class~="group-open:text-indigo-700"] { color: #4338ca; }
+        details[open] [class~="group-open:text-indigo-500"] { color: #6366f1; }
+        details[open] [class~="group-open:rotate-180"] { transform: rotate(180deg); }
+        [class~="list-none"] { list-style: none; }
+        [class~="pb-safe"] { padding-bottom: max(1rem, env(safe-area-inset-bottom)); }
+
+        .fa-solid, .fa-regular, .fa-brands { display: inline-block; font-style: normal; font-weight: 700; line-height: 1; }
+        .fa-whatsapp::before { content: "◉"; }
+        .fa-calendar-check::before, .fa-calendar::before { content: "▦"; }
+        .fa-arrow-right::before { content: "→"; }
+        .fa-earth-europe::before { content: "◎"; }
+        .fa-check-double::before, .fa-circle-check::before, .fa-check::before { content: "✓"; }
+        .fa-circle-minus::before { content: "−"; }
+        .fa-xmark::before { content: "×"; }
+        .fa-chevron-down::before { content: "⌄"; }
+        .fa-language::before { content: "文"; }
+        .fa-plane-departure::before, .fa-plane::before { content: "✈"; }
+        .fa-stopwatch::before { content: "◷"; }
+        .fa-map-location-dot::before { content: "⌖"; }
+        .fa-handshake::before, .fa-handshake-angle::before { content: "↔"; }
+        .fa-people-group::before { content: "♧"; }
+        .fa-route::before { content: "⌁"; }
+        .fa-file-signature::before { content: "✎"; }
+        .fa-shield-halved::before { content: "⬡"; }
+        .fa-credit-card::before { content: "▤"; }
+        .fa-envelope::before { content: "✉"; }
+        .fa-circle-check::before { color: inherit; }
+        .animate-ping { animation: ping 1.5s cubic-bezier(0, 0, .2, 1) infinite; }
+        @keyframes ping { 75%, 100% { transform: scale(2); opacity: 0; } }
+
+        nav { -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
+        header > div, section > div, footer > div { width: 100%; }
+        .fa-shield-halved { pointer-events: none; }
+        details > summary { cursor: pointer; }
+
+        @media (min-width: 640px) {
+            [class~="sm:block"] { display: block; }
+            [class~="sm:inline"] { display: inline; }
+            [class~="sm:hidden"] { display: none; }
+            [class~="sm:flex-row"] { flex-direction: row; }
+            [class~="sm:grid-cols-2"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            [class~="sm:px-6"] { padding-left: 1.5rem; padding-right: 1.5rem; }
+            [class~="sm:p-10"] { padding: 2.5rem; }
+            [class~="sm:space-x-4"] > :not([hidden]) ~ :not([hidden]) { margin-left: 1rem; }
+            [class~="sm:text-xl"] { font-size: 1.25rem; line-height: 1.75rem; }
+            [class~="sm:text-5xl"] { font-size: 3rem; line-height: 1; }
         }
-        .slogan-handwritten {
-            font-family: 'Caveat', cursive;
+        @media (min-width: 768px) {
+            [class~="md:flex"] { display: flex; }
+            [class~="md:hidden"] { display: none; }
+            [class~="md:flex-row"] { flex-direction: row; }
+            [class~="md:grid-cols-2"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            [class~="md:p-12"] { padding: 3rem; }
+            [class~="md:pb-10"] { padding-bottom: 2.5rem; }
+            [class~="md:pb-24"] { padding-bottom: 6rem; }
+            [class~="md:pt-40"] { padding-top: 10rem; }
+            [class~="md:text-4xl"] { font-size: 2.25rem; line-height: 2.5rem; }
+            [class~="md:text-5xl"] { font-size: 3rem; line-height: 1; }
+            [class~="md:text-xl"] { font-size: 1.25rem; line-height: 1.75rem; }
+            [class~="md:text-left"] { text-align: left; }
+            [class~="md:w-auto"] { width: auto; }
+            [class~="md:-translate-y-4"] { transform: translateY(-1rem); }
+        }
+        @media (min-width: 1024px) {
+            [class~="lg:px-8"] { padding-left: 2rem; padding-right: 2rem; }
+            [class~="lg:grid-cols-12"] { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+            [class~="lg:grid-cols-2"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            [class~="lg:grid-cols-4"] { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+            [class~="lg:col-span-5"] { grid-column: span 5 / span 5; }
+            [class~="lg:col-span-7"] { grid-column: span 7 / span 7; }
+            [class~="lg:gap-12"] { gap: 3rem; }
+            [class~="lg:mt-24"] { margin-top: 6rem; }
+            [class~="lg:text-6xl"] { font-size: 3.75rem; line-height: 1; }
         }
     </style>
 </head>
